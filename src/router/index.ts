@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
     //   name: "myhome",
     //   component: () => import("../views/MyHome.vue"),
     // },
-    ...myhomeroute, // ...(spread operator)으로 단일 배열 병합
+    ...myhomeroute, // ...(spread operator)으로 단일 배열로 병합
   ];
 
 const router = createRouter({
