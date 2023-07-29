@@ -1,11 +1,25 @@
 <template>
+  <HeaderView></HeaderView>
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/myhome">MyHome</router-link>
+    <router-link to="/myhome">MyHome</router-link> |
+    <router-link to="/cats/list">CatsList</router-link>
+
   </nav>
   <router-view/>
 </template>
+
+<script lang="ts">
+import HeaderView  from './components/common/HeaderView.vue'
+export default {
+  name: 'App',
+  components: {
+    HeaderView 
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {

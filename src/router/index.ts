@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import myhomeroute from "./myhome";
+import catsroute from "./cats";
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,6 +25,7 @@ const routes: Array<RouteRecordRaw> = [
     //   component: () => import("../views/MyHome.vue"),
     // },
     ...myhomeroute, // ...(spread operator)으로 단일 배열로 병합
+    ...catsroute,
   ];
 
 const router = createRouter({
