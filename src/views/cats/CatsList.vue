@@ -20,6 +20,7 @@
 
 <script lang="ts">
 import axios from "axios";
+import { defineComponent } from "vue";
 
 // Cats 인터페이스 정의
 interface Cat {
@@ -29,13 +30,13 @@ interface Cat {
   age: number;
   breed: string;
 }
-export default {
+export default defineComponent ({
   data() {
     return {
       cats: [] as Cat[],
     }
   },
-  created() {
+  mounted() {
     this.getList();
   },
   methods: {
@@ -50,5 +51,5 @@ export default {
       });
     }
   }
-}
+});
 </script>
